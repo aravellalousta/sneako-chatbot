@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+	    <pattern>HELLO</pattern>
+	    <template>
+	        <random>
+	            <li>Hi! I'm Tailo. I can help you find your clothing size. Would you like to get started?</li>
+	            <li>Hello there! I'm Tailo and I can offer clothing size assistance. Would you like to get started?</li>
+	            <li>Hey! This is Tailo, your personal size guide. Would you like to get started?</li>
+	        </random>
+	    </template>
+    </category>
+    
+    <category>
+        <pattern>HI</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    
+    <category>
+        <pattern>HEY</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    
+    <category>
+        <pattern>HIYA</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    
+    <category>
+        <pattern>HOWDY</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    
+    <category>
+        <pattern>GOOD MORNING</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    
+    <category>
+        <pattern>GOOD AFTERNOON</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    
+    <category>
+        <pattern>GOOD EVENING</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    
+    <category>
+        <pattern>GREETINGS</pattern>
+        <template><srai>HELLO</srai></template>
+    </category>
+    
+    <category>
+        <pattern>HOW ARE YOU</pattern>
+        <template>I'm great! How can I assist you?</template>
+    </category>
+    
+    <category>
+        <pattern>HOW ARE YOU DOING</pattern>
+        <template><srai>HOW ARE YOU</srai></template>
+    </category>
+    
+    <category>
+        <pattern>BYE #</pattern>
+        <template>
+            <random>
+                <li>Goodbye! I'm always here when you need size advice!</li>
+                <li>Take care! Let me know if you even need help with sizes again.</li>
+                <li>See you! Happy shopping!</li>
+            </random></template>
+    </category>
+    
+    <category>
+        <pattern>GOODBYE #</pattern>
+        <template><srai>BYE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>SEE YOU #</pattern>
+        <template><srai>BYE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>LATER #</pattern>
+        <template><srai>BYE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>CHEERS #</pattern>
+        <template><srai>BYE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>BITCH</pattern>
+        <template>NO</template>
+    </category>
+
+    <category>
+        <pattern>TEST</pattern>
+        <that>NO</that>
+        <template>This response only works if you said "TEST" after "BITCH"</template>
+    </category>
+    
+    <category>
+        <pattern>THANKS</pattern>
+        <template>You're welcome! Do you need anything else?</template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>DO YOU NEED ANYTHING ELSE</that>
+        <template><srai>BYE</srai></template>
+    </category>
+
+</aiml>
