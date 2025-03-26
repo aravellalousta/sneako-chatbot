@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
-	
+	<category>
+    <pattern>quiz</pattern>
+    <template>
+     Which of these topics are most interesting to you?
+        <button>
+            <text>topic1</text>
+            <postback>question 2 1</postback>
+        </button>
+        <button>
+            <text>topic2</text>
+            <postback>question 2 2</postback>
+        </button>
+        <button>
+            <text>topic3</text>
+            <postback>question 2 3</postback>
+        </button>
+        <button>
+            <text>topic4</text>
+            <postback>question 2 4</postback>
+        </button>
+        <button>
+            <text>topic5</text>
+            <postback>question 2 5</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>question 2 *</pattern>
+    <template>
+        <think><set name="question1"><star/></set></think>
+        You clicked on topic <get name="question1"/>.
+    </template>
+</category>
 
 </aiml>

@@ -92,17 +92,6 @@
     </category>
     
     <category>
-        <pattern>BITCH</pattern>
-        <template>NO</template>
-    </category>
-
-    <category>
-        <pattern>TEST</pattern>
-        <that>NO</that>
-        <template>This response only works if you said "TEST" after "BITCH"</template>
-    </category>
-    
-    <category>
         <pattern>THANKS</pattern>
         <template>You're welcome! Do you need anything else?</template>
     </category>
