@@ -5,7 +5,7 @@
 	    <pattern><set>yes</set></pattern>
 	    <that>WOULD YOU LIKE TO GET STARTED</that>
 	    <template>
-	        Great! I'm happy to help you with finding the best clothes for you. Please choose a category that is most suitable for your inquiry.<delay>1</delay>
+	        Great! I'm happy to help you with finding the best shoes for you. Please choose a category that is most suitable for your inquiry.<delay>1</delay>
 	        <button>
 	            <text>Help me choose my clothing size</text>
 	            <postback>CLOTHING BUTTON</postback>

@@ -4,9 +4,9 @@
 	    <pattern>HELLO</pattern>
 	    <template>
 	        <random>
-	            <li>Hi! I'm Tailo. I can help you find your clothing size. Would you like to get started?</li>
-	            <li>Hello there! I'm Tailo and I can offer clothing size assistance. Would you like to get started?</li>
-	            <li>Hey! This is Tailo, your personal size guide. Would you like to get started?</li>
+	            <li>Hi! I'm Sneako. I can help you with finding the best shoes for you. Would you like to get started?</li>
+	            <li>Hello there! I'm Sneako and I can offer shoe size assistance. Would you like to get started?</li>
+	            <li>Hey! This is Sneako, your personal shoe size guide. Would you like to get started?</li>
 	        </random>
 	    </template>
     </category>
@@ -66,7 +66,7 @@
         <template>
             <random>
                 <li>Goodbye! I'm always here when you need size advice!</li>
-                <li>Take care! Let me know if you even need help with sizes again.</li>
+                <li>Take care! Let me know if you even need help again.</li>
                 <li>See you! Happy shopping!</li>
             </random></template>
     </category>
@@ -92,7 +92,7 @@
     </category>
     
     <category>
-        <pattern>THANKS</pattern>
+        <pattern>^ THANKS</pattern>
         <template>You're welcome! Do you need anything else?</template>
     </category>
 
