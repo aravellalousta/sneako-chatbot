@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
-	
+	<!--Initial Interaction - Choosing Options -->
 	<category>
-	    <pattern><set>yes</set></pattern>
+	    <pattern><set>yes</set> ^ </pattern>
 	    <that>WOULD YOU LIKE TO GET STARTED</that>
 	    <template>
-	        Great! I'm happy to help you with finding the best shoes for you. Please choose a category that is most suitable for your inquiry.<delay>1</delay>
-	        <button>
-	            <text>Help me choose my clothing size</text>
-	            <postback>CLOTHING BUTTON</postback>
-            </button>
-            <button>
-                <text>Help me choose my shoe size</text>
-                <postback>SHOE BUTTON</postback>
-            </button>
-            <button>
-                <text>Ask Tailo something else</text>
-                <postback>OPENQUESTION BUTTON</postback>
-            </button>
+	        Great! I'm happy to help you with finding the best shoes for you. Please choose a category that is most suitable for your inquiry. <srai>buttonslist</srai>
 	    </template>
     </category>
     
+    <category>
+        <pattern>buttonslist</pattern>
+        <template>
+            <button>
+	            <text>Measure Shoe Size</text>
+	            <postback>Shoes Measurement BUTTON</postback>
+            </button>
+            <button>
+                <text>Size Conversion</text>
+                <postback>Size Conversion BUTTON</postback>
+            </button>
+            <button>
+                <text>Ask Sneako something else</text>
+                <postback>Open Question BUTTON</postback>
+            </button>
+        </template>
+    </category>
+    
+    <!-- Recovering from error - Choosing the wrong button -->
     <category>
         <pattern>* BUTTON</pattern>
         <template>
@@ -36,52 +43,18 @@
             </reply>
         </template>
     </category>
-	
-	<category>
-	    <pattern><set>no</set></pattern>
-	    <that>WOULD YOU LIKE TO GET STARTED</that>
-	    <template>
-	        I'm sorry, I can only offer assistance as a Size Guide. However, you can ask me any question and maybe I'll be able to help.
-	    </template>
-    </category>
-	
-	<category>
-	    <pattern><set>no</set></pattern>
-	    <that>HOWEVER, YOU CAN ASK ME ANY QUESTION AND MAYBE I WILL BE ABLE TO HELP</that>
-	    <template>Okay! <srai>BYE</srai></template>
-    </category>
     
     <category>
         <pattern>GOBACK</pattern>
-        <template>No worries. Please choose a category that is most suitable for your inquiry.<delay>1</delay>
-	        <button>
-	            <text>Help me choose my clothing size</text>
-	            <postback>CLOTHING BUTTON</postback>
-            </button>
-            <button>
-                <text>Help me choose my shoe size</text>
-                <postback>SHOE BUTTON</postback>
-            </button>
-            <button>
-                <text>Ask Tailo something else</text>
-                <postback>OPENQUESTION BUTTON</postback>
-            </button>
-            </template>
+        <template>
+            Please choose a category that is most suitable for your inquiry.
+            <think><set name="topic"></set></think>
+            <srai>buttonslist</srai>
+        </template>
     </category>
-	
-	<topic name="clothing">
-    	<category>
-    	    <pattern>YES</pattern>
-    	    <template>Awesome! I'm happy to help you find the ideal size for clothing. Can you please tell me what kind of clothing item you need help for?</template>
-        </category>
-        
-        <category>
-            <pattern>^ <set>clothing</set> ^</pattern>
-            <template>Of course! Let's see how we can help you find the ideal <set name="clothingitem"><star index="2"/></set> size.</template>
-        </category>
-    </topic>
-
-   <topic name="SHOE">
+    
+    <!-- SHOES MEASUREMENT: Responses based on topic -->
+   <topic name="Shoes Measurement">
         <category>
             <pattern>YES</pattern>
             <template>Great! Every great journey starts with the right shoes! Are we looking at Women’s, Men’s, or Kids’ sizes today?
@@ -118,9 +91,25 @@
                 </condition>
             </template>
         </category>
+    </topic>
+    
+     <!-- SIZE CONVERSION: Responses based on topic -->
+    <topic name="Size Conversion">
+    	<category>
+    	    <pattern>YES</pattern>
+    	    <template>Awesome! I'm happy to help you convert your shoe size. Do you wish to convert women's, men's or kid's sizes?</template>
+        </category>
         
+        <category>
+            <pattern>^ <set>clothing</set> ^</pattern>
+            <template>Of course! Let's see how we can help you find the ideal <set name="clothingitem"><star index="2"/></set> size.</template>
+        </category>
     </topic>
  
+    <!-- OPEN QUESTION: Responses based on topic -->
+    <topic name="Open Question">
+        
+    </topic>
     
     
 </aiml>

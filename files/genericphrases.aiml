@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>^ OK ^</pattern>
+        <template><srai>^ THANKS</srai></template>
+    </category>
+    
+	<category>
+        <pattern>^ THANKS</pattern>
+        <template>You're welcome! Do you need anything else?</template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>DO YOU NEED ANYTHING ELSE</that>
+        <template><srai>BYE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>$No</pattern>
+        <template>I'm sorry I'm not sure I understand. Can you please explain the problem?</template>
+    </category>
+    
+    <category>
+        <pattern>_ shoes</pattern>
+        <template>
+            I see you're interested in shoes! Are you looking for:
+            <srai>buttonslist</srai>
+        </template>
+    </category>
+    
+    <category>
+	    <pattern><set>no</set></pattern>
+	    <that>WOULD YOU LIKE TO GET STARTED</that>
+	    <template>
+	        I'm sorry, I can only offer assistance as a Size Guide. However, you can ask me any question and maybe I'll be able to help.
+	    </template>
+    </category>
+	
+	<category>
+	    <pattern><set>no</set></pattern>
+	    <that>HOWEVER, YOU CAN ASK ME ANY QUESTION AND MAYBE I WILL BE ABLE TO HELP</that>
+	    <template>Okay! <srai>BYE</srai></template>
+    </category>
+</aiml>

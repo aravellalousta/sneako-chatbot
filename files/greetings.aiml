@@ -90,16 +90,5 @@
         <pattern>CHEERS #</pattern>
         <template><srai>BYE</srai></template>
     </category>
-    
-    <category>
-        <pattern>^ THANKS</pattern>
-        <template>You're welcome! Do you need anything else?</template>
-    </category>
-
-    <category>
-        <pattern>NO</pattern>
-        <that>DO YOU NEED ANYTHING ELSE</that>
-        <template><srai>BYE</srai></template>
-    </category>
 
 </aiml>
