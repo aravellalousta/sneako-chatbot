@@ -42,4 +42,20 @@
 	    <that>HOWEVER, YOU CAN ASK ME ANY QUESTION AND MAYBE I WILL BE ABLE TO HELP</that>
 	    <template>Okay! <srai>BYE</srai></template>
     </category>
+    
+    <category>
+        <pattern># BACK #</pattern>
+        <template>Looks like there has been a mistake. Do you wish to start over?</template>
+    </category>
+    
+    <category>
+        <pattern># WRONG #</pattern>
+        <template><srai>BACK</srai></template>
+    </category>
+    
+    <category>
+        <that>DO YOU WISH TO START OVER</that>
+        <pattern><set>yes</set>#</pattern>
+        <template><srai>buttonslist</srai></template>
+    </category>
 </aiml>

@@ -17,37 +17,37 @@
     </category>
     
     <category>
-        <pattern>HEY</pattern>
+        <pattern>HEY #</pattern>
         <template><srai>HELLO</srai></template>
     </category>
     
     <category>
-        <pattern>HIYA</pattern>
+        <pattern>HIYA #</pattern>
         <template><srai>HELLO</srai></template>
     </category>
     
     <category>
-        <pattern>HOWDY</pattern>
+        <pattern>HOWDY #</pattern>
         <template><srai>HELLO</srai></template>
     </category>
     
     <category>
-        <pattern>GOOD MORNING</pattern>
+        <pattern>GOOD MORNING #</pattern>
         <template><srai>HELLO</srai></template>
     </category>
     
     <category>
-        <pattern>GOOD AFTERNOON</pattern>
+        <pattern>GOOD AFTERNOON #</pattern>
         <template><srai>HELLO</srai></template>
     </category>
     
     <category>
-        <pattern>GOOD EVENING</pattern>
+        <pattern>GOOD EVENING #</pattern>
         <template><srai>HELLO</srai></template>
     </category>
     
     <category>
-        <pattern>GREETINGS</pattern>
+        <pattern>GREETINGS #</pattern>
         <template><srai>HELLO</srai></template>
     </category>
     

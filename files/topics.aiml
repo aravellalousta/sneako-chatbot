@@ -5,13 +5,14 @@
 	    <pattern><set>yes</set> ^ </pattern>
 	    <that>WOULD YOU LIKE TO GET STARTED</that>
 	    <template>
-	        Great! I'm happy to help you with finding the best shoes for you. Please choose a category that is most suitable for your inquiry. <srai>buttonslist</srai>
+	        Great! I'm happy to help you with finding the best shoes for you. <srai>buttonslist</srai>
 	    </template>
     </category>
     
     <category>
         <pattern>buttonslist</pattern>
         <template>
+            Please choose a category that is most suitable for your inquiry.
             <button>
 	            <text>Measure Shoe Size</text>
 	            <postback>Shoes Measurement BUTTON</postback>
@@ -58,18 +59,18 @@
         <category>
             <pattern>YES</pattern>
             <template>Great! Every great journey starts with the right shoes! Are we looking at Women’s, Men’s, or Kids’ sizes today?
-            <button>
-	            <text>Women</text>
-	            <postback>WOMEN SHOE</postback>
-            </button>
-            <button>
-                <text>Men</text>
-                <postback>MEN SHOE</postback>
-            </button>
-            <button>
-                <text>Kids</text>
-                <postback>KID SHOE</postback>
-            </button>
+                <button>
+    	            <text>Women</text>
+    	            <postback>WOMEN SHOE</postback>
+                </button>
+                <button>
+                    <text>Men</text>
+                    <postback>MEN SHOE</postback>
+                </button>
+                <button>
+                    <text>Kids</text>
+                    <postback>KID SHOE</postback>
+                </button>
             </template>
         </category>
         
@@ -77,13 +78,14 @@
             <pattern>* SHOE</pattern>
             <template>
                 <think><set name="gender"><star/></set></think>
-                To get the right fit you first need to measure your foot.
+                To get the right fit you first need to measure your foot. <delay>1</delay>
                 <ul>
                     <li>Place your foot against the wall with a piece of paper underneath.</li>
                     <li>Mark a line where your longest toe ends.</li>
                     <li>Measure the distance between the wall and the line you marked.</li>
                     <li>Find the size that fits you best on the size guide below.</li>
                 </ul>
+                <delay>1</delay>
                 <condition name="gender">
                     <li value="WOMEN"><image>https://cdn.shopify.com/s/files/1/0517/3195/5883/files/Shoe_Size_Chart_For_Women.webp</image></li>
                     <li value="MEN"><image>https://shoezero.com/cdn/shop/articles/Shoe_Size_Chart_For_Men.webp</image></li>
@@ -101,8 +103,16 @@
         </category>
         
         <category>
-            <pattern>^ <set>clothing</set> ^</pattern>
-            <template>Of course! Let's see how we can help you find the ideal <set name="clothingitem"><star index="2"/></set> size.</template>
+            <that>DO YOU WISH TO CONVERT WOMEN S, MEN S OR KID S SIZES</that>
+            <pattern><set>genders</set></pattern>
+            <template>
+                <think><set name="gender"><star/></set></think>
+                <condition name="gender">
+                    <li value="WOMEN">ok showing women</li>
+                    <li value="MEN"></li>
+                    <li value="KID"></li>
+                </condition>
+            </template>
         </category>
     </topic>
  
