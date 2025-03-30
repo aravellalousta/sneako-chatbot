@@ -141,7 +141,7 @@
                 <condition name="gender">
                     <li value="women">Your EU shoe size is <map name="shoesizeswomen"><star/></map>.</li>
                     <li value="men">Your EU shoe size is <map name="shoesizesmen"><star/></map>.</li>
-                    <li value="kids">Your EU shoe size is <map name="shoesizeskids"><star/></map>.</li>
+                    <li value="kids">Your EU shoe size is <map name="convertkids"><star/></map>.</li>
                 </condition>
             </template>
         </category>
@@ -154,7 +154,7 @@
                 <condition name="gender">
                     <li value="women">Your US shoe size is <map name="shoesizeswomen"><star/></map>.</li>
                     <li value="men">Your US shoe size is <map name="shoesizesmen"><star/></map>.</li>
-                    <li value="kids">Your US shoe size is <map name="shoesizeskids"><star/></map>.</li>
+                    <li value="kids">Your US shoe size is <map name="convertkids"><star/></map>.</li>
                 </condition>
             </template>
         </category>
