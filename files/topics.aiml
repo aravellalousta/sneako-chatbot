@@ -151,11 +151,7 @@
         </category>
         
             <!-- Recover from Errors While Entering Shoe Size -->
-        <category>
-            <that>PLEASE ENTER YOUR US SHOE SIZE TO CONVERT</that>
-            <pattern>*</pattern>
-            <template>It looks like that’s not a shoe size. Try entering a number, like 8 or 7.5.</template>
-        </category>
+        
         
         <category>
             <that>PLEASE ENTER YOUR EU SHOE SIZE TO CONVERT</that>
@@ -165,7 +161,7 @@
         
         <category>
             <that>PLEASE ENTER YOUR US SHOE SIZE TO CONVERT</that>
-            <pattern><set>idontknowcollection</set></pattern>
+            <pattern><set>idk</set></pattern>
             <template>
                 <think><set name="topic">Shoes Measurement</set></think>
                 Don't worry! I can also help you find the correct shoe size for you.
