@@ -44,6 +44,11 @@
     </category>
     
     <category>
+        <pattern>$SORRY</pattern>
+        <template>It's okay!</template>
+    </category>
+    
+    <category>
         <pattern># BACK #</pattern>
         <template>Looks like there has been a mistake. Do you wish to start over?</template>
     </category>

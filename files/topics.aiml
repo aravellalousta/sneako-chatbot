@@ -102,6 +102,7 @@
     	    <template>Awesome! I'm happy to help you convert your shoe size. Do you wish to convert women, men or kids sizes?</template>
         </category>
         
+        <!-- Choosing Type of Conversion -->
         <category>
             <that>DO YOU WISH TO CONVERT WOMEN, MEN OR KIDS SIZES</that>
             <pattern><set>genders</set></pattern>
@@ -133,31 +134,47 @@
             </template>
         </category>
         
+        <!-- Entering Shoe Size -->
         <category>
-            <that>PLEASE ENTER YOUR US SHOE SIZE TO CONVERT</that>
-            <pattern>*</pattern>
+            <pattern>^ <set>ussizes</set></pattern>
             <template>
-                <think><set name="usshoesize"><star/></set></think>
+                <think><set name="usshoesize"><star index="2"/></set></think> <srai>CONVERT US TO EU SIZE</srai>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>^ <set>eusizes</set></pattern>
+            <template>
+                <think><set name="eushoesize"><star index="2"/></set></think>
+                <srai>CONVERT EU TO US SIZE</srai>
+            </template>
+        </category>
+        
+        <!-- Size Conversion Using Maps -->
+        <category>
+            <pattern>CONVERT US TO EU SIZE</pattern>
+            <template>
+                Thank you! 
                 <condition name="gender">
-                    <li value="women">Your EU shoe size is <map name="convertwomen"><star/></map>.</li>
-                    <li value="men">Your EU shoe size is <map name="convertwomen"><star/></map>.</li>
-                    <li value="kids">Your EU shoe size is <map name="convertkids"><star/></map>.</li>
+                    <li value="women"> Your EU shoe size is <map name="convertwomen"><get name="usshoesize"></get></map>.</li>
+                    <li value="men"> Your EU shoe size is <map name="convertmen"><get name="usshoesize"></get></map>.</li>
+                    <li value="kids"> Your EU shoe size is <map name="convertkids"><get name="usshoesize"></get></map>.</li>
                 </condition>
             </template>
         </category>
         
         <category>
-            <that>PLEASE ENTER YOUR EU SHOE SIZE TO CONVERT</that>
-            <pattern>*</pattern>
+            <pattern>CONVERT EU TO US SIZE</pattern>
             <template>
-                <think><set name="eushoesize"><star/></set></think>
+                Thank you! 
                 <condition name="gender">
-                    <li value="women">Your US shoe size is <map name="shoesizeswomen"><star/></map>.</li>
-                    <li value="men">Your US shoe size is <map name="shoesizesmen"><star/></map>.</li>
-                    <li value="kids">Your US shoe size is <map name="convertkids"><star/></map>.</li>
+                    <li value="women"> Your US shoe size is <map name="convertwomen"><get name="eushoesize"></get></map>.</li>
+                    <li value="men"> Your US shoe size is <map name="convertmen"><get name="eushoesize"></get></map>.</li>
+                    <li value="kids"> Your US shoe size is <map name="convertkids"><get name="eushoesize"></get></map>.</li>
                 </condition>
             </template>
         </category>
+        
     </topic>
  
     <!-- OPEN QUESTION: Responses based on topic -->
