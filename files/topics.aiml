@@ -150,9 +150,7 @@
             </template>
         </category>
         
-            <!-- Recover from Errors While Entering Shoe Size -->
-        
-        
+        <!-- Recover from Errors While Entering Shoe Size -->
         <category>
             <that>PLEASE ENTER YOUR EU SHOE SIZE TO CONVERT</that>
             <pattern>*</pattern>
@@ -161,20 +159,22 @@
         
         <category>
             <that>PLEASE ENTER YOUR US SHOE SIZE TO CONVERT</that>
+            <pattern>*</pattern>
+            <template>It looks like that’s not a shoe size. Try entering a number, like 7.5 or 10.</template>
+        </category>
+        
+        <!-- Transfer to other topic if they don't know their size -->
+        <category>
+            <that>PLEASE ENTER YOUR US SHOE SIZE TO CONVERT</that>
             <pattern><set>idk</set></pattern>
             <template>
                 <think><set name="topic">Shoes Measurement</set></think>
                 Don't worry! I can also help you find the correct shoe size for you.
                 <delay>2</delay>
                 Here are some helpful instructions!
-                <srai>MEN SHOE</srai>
-                
+                <srai><get name="gender"/> SHOE</srai>
             </template>
         </category>
-        
-        
-        
-        
         
         <!-- Size Conversion Using Maps -->
         <category>
