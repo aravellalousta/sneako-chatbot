@@ -99,18 +99,62 @@
     <topic name="Size Conversion">
     	<category>
     	    <pattern>YES</pattern>
-    	    <template>Awesome! I'm happy to help you convert your shoe size. Do you wish to convert women's, men's or kid's sizes?</template>
+    	    <template>Awesome! I'm happy to help you convert your shoe size. Do you wish to convert women, men or kids sizes?</template>
         </category>
         
         <category>
-            <that>DO YOU WISH TO CONVERT WOMEN S, MEN S OR KID S SIZES</that>
+            <that>DO YOU WISH TO CONVERT WOMEN, MEN OR KIDS SIZES</that>
             <pattern><set>genders</set></pattern>
             <template>
                 <think><set name="gender"><star/></set></think>
+                Please choose the type of conversion.
+                <reply>
+                    <text>US to EU</text>
+                    <postback>USTOEU</postback>
+                </reply>
+                <reply>
+                    <text>EU to US</text>
+                    <postback>EUTOUS</postback>
+                </reply>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>USTOEU</pattern>
+            <template>
+                Please enter your US shoe size to convert.
+            </template>
+        </category>
+        
+        <category>
+            <pattern>EUTOUS</pattern>
+            <template>
+                Please enter your EU shoe size to convert.
+            </template>
+        </category>
+        
+        <category>
+            <that>PLEASE ENTER YOUR US SHOE SIZE TO CONVERT</that>
+            <pattern>*</pattern>
+            <template>
+                <think><set name="usshoesize"><star/></set></think>
                 <condition name="gender">
-                    <li value="WOMEN">ok showing women</li>
-                    <li value="MEN"></li>
-                    <li value="KID"></li>
+                    <li value="women">Your EU shoe size is <map name="shoesizeswomen"><star/></map>.</li>
+                    <li value="men">Your EU shoe size is <map name="shoesizesmen"><star/></map>.</li>
+                    <li value="kids">Your EU shoe size is <map name="shoesizeskids"><star/></map>.</li>
+                </condition>
+            </template>
+        </category>
+        
+        <category>
+            <that>PLEASE ENTER YOUR EU SHOE SIZE TO CONVERT</that>
+            <pattern>*</pattern>
+            <template>
+                <think><set name="eushoesize"><star/></set></think>
+                <condition name="gender">
+                    <li value="women">Your US shoe size is <map name="shoesizeswomen"><star/></map>.</li>
+                    <li value="men">Your US shoe size is <map name="shoesizesmen"><star/></map>.</li>
+                    <li value="kids">Your US shoe size is <map name="shoesizeskids"><star/></map>.</li>
                 </condition>
             </template>
         </category>

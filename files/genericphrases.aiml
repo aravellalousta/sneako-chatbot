@@ -17,7 +17,7 @@
     </category>
     
     <category>
-        <pattern>$No</pattern>
+        <pattern>NO</pattern>
         <template>I'm sorry I'm not sure I understand. Can you please explain the problem?</template>
     </category>
     
