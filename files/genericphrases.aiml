@@ -63,4 +63,31 @@
         <pattern><set>yes</set>#</pattern>
         <template><srai>buttonslist</srai></template>
     </category>
+    
+    <category>
+        <that>WANT TO START OVER</that>
+        <pattern><set>yes</set></pattern>
+        <template><srai>buttonslist</srai></template>
+    </category>
+    
+    <category>
+        <pattern>I WANT TO *</pattern>
+        <template>
+            <think><set name="want"><star/></set></think>
+            <condition name="want">
+                <li value="convert">
+                    <think><set name="topic">Size Conversion</set></think> 
+                    I can help you convert your shoe size. Do you wish to proceed? (Yes/No)
+                </li>
+                <li value="measure">
+                    <think><set name="topic">Shoes Measurement</set></think> 
+                    I can help you find your shoe size. Do you wish to proceed? (Yes/No)
+                </li>
+                <li>
+                     <think><set name="topic">Open Question</set></think> 
+                    I'm not sure if I can help you with this, can you please clarify?
+                </li>
+            </condition>
+        </template>
+    </category>
 </aiml>

@@ -2,6 +2,12 @@
 <aiml>
   <category>
     <pattern>*</pattern>
-    <template>Unfortunately I don't know how to answer this.</template>
+    <template>
+        <random>
+            <li>Unfortunately I don't know how to answer this.</li>
+            <li>I'm sorry, but I don't seem to have an answer for that. If you're confused, please start from the beginning by saying "Hello".</li>
+            <li>I love a good chat, but I’m best at shoe size conversions and measurements. Want to start over?</li>
+        </random>
+    </template>
   </category>
 </aiml>
