@@ -139,8 +139,8 @@
             <template>
                 <think><set name="usshoesize"><star/></set></think>
                 <condition name="gender">
-                    <li value="women">Your EU shoe size is <map name="shoesizeswomen"><star/></map>.</li>
-                    <li value="men">Your EU shoe size is <map name="shoesizesmen"><star/></map>.</li>
+                    <li value="women">Your EU shoe size is <map name="convertwomen"><star/></map>.</li>
+                    <li value="men">Your EU shoe size is <map name="convertwomen"><star/></map>.</li>
                     <li value="kids">Your EU shoe size is <map name="convertkids"><star/></map>.</li>
                 </condition>
             </template>
