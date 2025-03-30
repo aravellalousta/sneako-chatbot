@@ -69,7 +69,7 @@
                 </button>
                 <button>
                     <text>Kids</text>
-                    <postback>KID SHOE</postback>
+                    <postback>KIDS SHOE</postback>
                 </button>
             </template>
         </category>
@@ -89,7 +89,7 @@
                 <condition name="gender">
                     <li value="WOMEN"><image>https://cdn.shopify.com/s/files/1/0517/3195/5883/files/Shoe_Size_Chart_For_Women.webp</image></li>
                     <li value="MEN"><image>https://shoezero.com/cdn/shop/articles/Shoe_Size_Chart_For_Men.webp</image></li>
-                    <li value="KID"><image>https://cdn.shopify.com/s/files/1/0352/4942/2467/files/WhatsApp_Image_2025-01-09_at_16.08.16.jpg</image></li>
+                    <li value="KIDS"><image>https://cdn.shopify.com/s/files/1/0352/4942/2467/files/WhatsApp_Image_2025-01-09_at_16.08.16.jpg</image></li>
                 </condition>
             </template>
         </category>
@@ -182,10 +182,13 @@
             <template>
                 Thank you! 
                 <condition name="gender">
-                    <li value="women"> Your EU shoe size is <map name="convertwomen"><get name="usshoesize"></get></map>.</li>
-                    <li value="men"> Your EU shoe size is <map name="convertmen"><get name="usshoesize"></get></map>.</li>
-                    <li value="kids"> Your EU shoe size is <map name="convertkids"><get name="usshoesize"></get></map>.</li>
+                    <li value="WOMEN"> Your EU shoe size is <map name="convertwomen"><get name="usshoesize"></get></map>.</li>
+                    <li value="MEN"> Your EU shoe size is <map name="convertmen"><get name="usshoesize"></get></map>.</li>
+                    <li value="KIDS"> Your EU shoe size is <map name="convertkids"><get name="usshoesize"></get></map>.</li>
                 </condition>
+                <split/>
+                <srai>ANYTHINGELSE</srai>
+                <set name="topic"></set>
             </template>
         </category>
         
@@ -194,10 +197,13 @@
             <template>
                 Thank you! 
                 <condition name="gender">
-                    <li value="women"> Your US shoe size is <map name="convertwomen"><get name="eushoesize"></get></map>.</li>
-                    <li value="men"> Your US shoe size is <map name="convertmen"><get name="eushoesize"></get></map>.</li>
-                    <li value="kids"> Your US shoe size is <map name="convertkids"><get name="eushoesize"></get></map>.</li>
+                    <li value="WOMEN"> Your US shoe size is <map name="convertwomen"><get name="eushoesize"></get></map>. </li>
+                    <li value="MEN"> Your US shoe size is <map name="convertmen"><get name="eushoesize"></get></map>. </li>
+                    <li value="KIDS"> Your US shoe size is <map name="convertkids"><get name="eushoesize"></get></map>. </li>
                 </condition>
+                <split/>
+                <srai>ANYTHINGELSE</srai>
+                <set name="topic"></set>
             </template>
         </category>
         

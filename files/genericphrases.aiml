@@ -11,13 +11,28 @@
     </category>
 
     <category>
+        <pattern>ANYTHINGELSE</pattern>
+        <template>Do you need anything else?</template>
+    </category>
+
+    <category>
         <pattern>NO</pattern>
         <that>DO YOU NEED ANYTHING ELSE</that>
         <template><srai>BYE</srai></template>
     </category>
     
     <category>
-        <pattern>NO</pattern>
+        <pattern><set>yes</set></pattern>
+        <that>DO YOU NEED ANYTHING ELSE</that>
+        <template>
+            I'm more than happy to help! 
+            <srai>buttonslist</srai>
+        </template>
+    </category>
+    
+    
+    <category>
+        <pattern><set>no</set></pattern>
         <template>I'm sorry I'm not sure I understand. Can you please explain the problem?</template>
     </category>
     
