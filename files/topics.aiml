@@ -91,6 +91,11 @@
                     <li value="MEN"><image>https://shoezero.com/cdn/shop/articles/Shoe_Size_Chart_For_Men.webp</image></li>
                     <li value="KIDS"><image>https://cdn.shopify.com/s/files/1/0352/4942/2467/files/WhatsApp_Image_2025-01-09_at_16.08.16.jpg</image></li>
                 </condition>
+                <link>
+                    <text>Check out this tutorial on how to measure your shoe size! </text>
+                    <url>https://www.youtube.com/watch?v=N2_QmZ9cPgk</url>
+                </link>
+                <set name="topic"></set>
             </template>
         </category>
     </topic>
@@ -166,7 +171,7 @@
         <!-- Transfer to other topic if they don't know their size -->
         <category>
             <that>PLEASE ENTER YOUR US SHOE SIZE TO CONVERT</that>
-            <pattern><set>idk</set></pattern>
+            <pattern><set>idk</set> ^</pattern>
             <template>
                 <think><set name="topic">Shoes Measurement</set></think>
                 Don't worry! I can also help you find the correct shoe size for you.
@@ -211,7 +216,30 @@
  
     <!-- OPEN QUESTION: Responses based on topic -->
     <topic name="Open Question">
+        <category>
+            <pattern><set>yes</set></pattern>
+            <template>Great! You can ask me any shoe related question and I'll do my best to help!</template>
+        </category>
         
+        <category>
+            <pattern>^ BUY ^</pattern>
+            <template>I can assist you in finding the right size for you and converting sizes. If you need help with ordering please contact our customer support team!</template>
+        </category>
+        
+        <category>
+            <pattern>^ SIZE UP ^ RUNNING ^</pattern>
+            <template>When buying running shoes, it's generally recommended to go up a half size to a full size from your regular shoe size.</template>
+        </category>
+        
+        <category>
+            <pattern>^ CLEAN MY SHOES ^</pattern>
+            <template>Remove laces and insoles. Scrub with warm water, a little dish soap and brush. Rinse well with warm water and dry in the sun.</template>
+        </category>
+        
+        <category>
+            <pattern>^ WASHING MACHINE ^</pattern>
+            <template>I do not recommend washing your shoes in the washing machine. To clean your shoes properly: <split/> <srai>^ CLEAN MY SHOES ^</srai></template>
+        </category>
     </topic>
     
     

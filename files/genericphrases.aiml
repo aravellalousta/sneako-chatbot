@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
     <category>
-        <pattern>^ OK ^</pattern>
+        <pattern>^ THANK YOU ^</pattern>
         <template><srai>^ THANKS</srai></template>
     </category>
     
@@ -16,7 +16,7 @@
     </category>
 
     <category>
-        <pattern>NO</pattern>
+        <pattern><set>no</set></pattern>
         <that>DO YOU NEED ANYTHING ELSE</that>
         <template><srai>BYE</srai></template>
     </category>
@@ -37,7 +37,7 @@
     </category>
     
     <category>
-        <pattern>_ shoes</pattern>
+        <pattern>^ shoes</pattern>
         <template>
             I see you're interested in shoes! Are you looking for:
             <srai>buttonslist</srai>
@@ -49,6 +49,7 @@
 	    <that>WOULD YOU LIKE TO GET STARTED</that>
 	    <template>
 	        I'm sorry, I can only offer assistance as a Size Guide. However, you can ask me any question and maybe I'll be able to help.
+	        <think><set name="topic">Open Question</set></think>
 	    </template>
     </category>
 	
